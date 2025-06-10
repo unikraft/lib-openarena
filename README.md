@@ -1,0 +1,2 @@
+# lib-openarena
+OpenArena Engine
