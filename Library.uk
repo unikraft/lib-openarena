@@ -1,0 +1,5 @@
+name        := "OpenArena"
+description := "A server for OpenArena, a community-produced deathmatch FPS based of GPL idTech3 technology."
+homepage    := "https://openarena.ws/"
+version     := 0.8.8 6f768215fc27355a90a3fd35b4078fa4d88ac60a79a665de7d4eb8aaf267a5c5 https://github.com/OpenArena/engine/archive/refs/heads/master.zip
+license     := "GPL-2.0"

@@ -1,0 +1,51 @@
+menuconfig LIBOPENARENA
+    bool "libopenarena - a server for OpenArena, a community-produced deathmatch FPS based of GPL idTech3 technology"
+    default n
+    select LIBPOSIX_EVENTFD
+    select LIBPOSIX_USER
+    select LIBUKVMEM
+    select LIBPOSIX_MMAP
+    select LIBMUSL
+    select LIBLWIP
+    select LIBUKNETDEV_EINFO_LIBPARAM
+    select LWIP_TCP_KEEPALIVE
+    select LWIP_THREADS
+    select LWIP_IPV6
+    select LWIP_DHCP
+    select LIBZLIB
+
+if LIBOPENARENA
+
+config LIBOPENARENA_MAIN_FUNCTION
+    bool "Provide main function"
+    default n
+
+config LIBOPENARENA_ASM
+    bool "Provide assembly code for optimized math calculations"
+    default y
+
+config LIBOPENARENA_BOTLIB
+    bool "Provide code supporting bot players actions"
+    default y
+
+config LIBOPENARENA_GAME
+    bool "Provide code for ingame logic"
+    default y
+
+config LIBOPENARENA_NULL
+    bool "Provide code for dummy implementations of rendering-related functions"
+    default y
+
+config LIBOPENARENA_QCOMMON
+    bool "Provide common code for server and client"
+    default y
+
+config LIBOPENARENA_SERVER
+    bool "Provide code for the game loop, frames generation and networking communication"
+    default y
+
+config LIBOPENARENA_SYS
+    bool "Provide code for OS-level interaction"
+    default y
+
+endif
